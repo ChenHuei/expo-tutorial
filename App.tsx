@@ -7,7 +7,7 @@ import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
 
 import { HomeStackScreen } from '@routes/home';
-import About from '@views/About';
+import { AboutStackScreen } from '@routes/about';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,10 +15,10 @@ const getTabIconName = (routeName: string, focused: boolean) => {
   let iconName;
 
   switch (routeName) {
-    case 'Home':
+    case 'Index':
       iconName = focused ? 'home' : 'home-outline';
       break;
-    case 'About':
+    case 'Info':
       iconName = focused ? 'information' : 'information-outline';
       break;
     default:
@@ -47,8 +47,8 @@ export default function App() {
             headerShown: false,
           })}
         >
-          <Tab.Screen name="Home" component={HomeStackScreen} />
-          <Tab.Screen name="About" component={About} />
+          <Tab.Screen name="Index" component={HomeStackScreen} />
+          <Tab.Screen name="Info" component={AboutStackScreen} />
         </Tab.Navigator>
       </NavigationContainer>
       <StatusBar style="auto" />
