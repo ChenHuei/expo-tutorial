@@ -13,7 +13,6 @@ const Card = (props: PropsWithChildren<CardProps>) => {
 
 const styles = StyleSheet.create({
   card: {
-    flex: 1,
     borderRadius: 6,
     elevation: 3,
     backgroundColor: '#fff',

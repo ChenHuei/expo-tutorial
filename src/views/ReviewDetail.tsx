@@ -1,8 +1,9 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
-
+import { StyleSheet, View, Text, Image } from 'react-native';
 import { globalStyles } from '@styles/globals';
 import { RouteProp } from '@react-navigation/native';
+
+import Card from '@components/Card';
 
 import { Review } from './Home';
 
@@ -12,19 +13,30 @@ interface ReviewDetailProps {
 }
 
 const ReviewDetail = (props: ReviewDetailProps) => {
-  const { navigation, route } = props;
+  const { route } = props;
   const { title, message, rating } = route.params;
 
   return (
     <View style={globalStyles.container}>
-      <Text style={globalStyles.title}>ReviewDetail</Text>
-      <Text>{title}</Text>
-      <Text>{message}</Text>
-      <Text>{rating}</Text>
-      <Button title="go to home" onPress={() => navigation.navigate('Home')}></Button>
+      <Card>
+        <Text>{title}</Text>
+        <Text>{message}</Text>
+        <View style={styles.rating}>
+          <Text>rating: </Text>
+          {[...Array(rating).keys()].map((key) => (
+            <Image key={key} source={require('@assets/rating.png')} />
+          ))}
+        </View>
+      </Card>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  rating: {
+    flexDirection: 'row',
+  },
+});
 
 export default ReviewDetail;
 export type { ReviewDetailProps };
