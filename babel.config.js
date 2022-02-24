@@ -21,6 +21,8 @@ module.exports = function (api) {
           ],
           alias: {
             '@views': './src/views',
+            '@components': './src/components',
+            '@routes': './src/routes',
             '@styles': './src/styles',
           },
         },
