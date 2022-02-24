@@ -4,7 +4,8 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@views/*": ["./src/views/*"]
+      "@views/*": ["./src/views/*"],
+      "@styles/*": ["./src/styles/*"]
     }
   }
 }

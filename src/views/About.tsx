@@ -1,21 +1,17 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { View, Text } from 'react-native';
+
+import { globalStyles } from '@styles/globals';
 
 interface AboutProps {}
 
 const About = (props: AboutProps) => {
   return (
-    <View style={styles.container}>
-      <Text>About</Text>
+    <View style={globalStyles.container}>
+      <Text style={globalStyles.title}>About</Text>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 24,
-  },
-});
 
 export default About;
 export type { AboutProps };
