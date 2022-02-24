@@ -1,0 +1,40 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "tailwindCSS.emmetCompletions": true,
+  "prettier.printWidth": 100,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.endOfLine": "auto",
+  "prettier.arrowParens": "always",
+  "cSpell.words": [
+    "APRD",
+    "compat",
+    "flexbugs",
+    "HKTV",
+    "IonSearchbar",
+    "reduxjs",
+    "shoalter",
+    "Shoalter",
+    "tailwindcss",
+    "unoptimized",
+    "VIEWPORTS",
+    "keycloakUserId",
+    "customerapp",
+    "aprditem",
+    "aprdorder",
+    "aprdutils",
+    "aprdpromotion",
+    "aprdpayment",
+    "applepay",
+    "googlepay",
+    "Malldollars"
+  ]
+}
