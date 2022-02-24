@@ -20,6 +20,7 @@ module.exports = function (api) {
             '.json',
           ],
           alias: {
+            '@assets': './assets',
             '@views': './src/views',
             '@components': './src/components',
             '@routes': './src/routes',

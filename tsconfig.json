@@ -4,6 +4,7 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
+      "@assets/*": ["./assets/*"],
       "@views/*": ["./src/views/*"],
       "@components/*": ["./src/components/*"],
       "@routes/*": ["./src/routes/*"],
