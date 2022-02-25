@@ -19,11 +19,11 @@ const ReviewDetail = (props: ReviewDetailProps) => {
   return (
     <View style={globalStyles.container}>
       <Card>
-        <Text>{title}</Text>
+        <Text style={globalStyles.title}>{title}</Text>
         <Text>{message}</Text>
         <View style={styles.rating}>
           <Text>rating: </Text>
-          {[...Array(rating).keys()].map((key) => (
+          {[...Array(parseInt(rating)).keys()].map((key) => (
             <Image key={key} source={require('@assets/rating.png')} />
           ))}
         </View>

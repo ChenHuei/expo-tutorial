@@ -73,7 +73,6 @@ const Home = (props: HomeProps) => {
             <Card>
               <Text style={globalStyles.title}>{item.title}</Text>
               <Text>{item.message}</Text>
-              <Text>{item.rating}</Text>
             </Card>
           </TouchableOpacity>
         )}
