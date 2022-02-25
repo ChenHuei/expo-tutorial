@@ -1,9 +1,10 @@
 import React from 'react';
-import { StyleSheet, TextInput, View, Button, Text } from 'react-native';
+import { StyleSheet, TextInput, View, Text } from 'react-native';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 
 import { Review } from '@views/Home';
+import Button from '@components/Button';
 
 const formSchema = yup.object({
   title: yup.string().required().min(4),
@@ -66,7 +67,7 @@ const Form = (props: FormProps) => {
             />
             <Text style={styles.error}>{props.touched.rating && props.errors.rating}</Text>
             {/* TODO: fix type error */}
-            <Button color="maroon" title="Submit" onPress={props.handleSubmit} />
+            <Button text="Submit" onPress={props.handleSubmit} />
           </View>
         )}
       </Formik>
