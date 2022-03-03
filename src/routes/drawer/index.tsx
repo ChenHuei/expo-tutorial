@@ -8,7 +8,7 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import TabNavigator from '@routes/tab';
-import Other from '@views/Other';
+import Notification from '@views/Notification';
 
 interface DrawerNavigatorProps {}
 
@@ -26,9 +26,9 @@ const DrawerNavigator = () => {
             }}
           />
           <DrawerItem
-            label="Other"
+            label="Notification"
             onPress={() => {
-              props.navigation.navigate('Other');
+              props.navigation.navigate('Notification');
             }}
           />
         </DrawerContentScrollView>
@@ -40,10 +40,10 @@ const DrawerNavigator = () => {
         options={{ title: 'Home', headerShown: false }}
       />
       <Drawer.Screen
-        name="Other"
-        component={Other}
+        name="Notification"
+        component={Notification}
         options={({ navigation }) => ({
-          title: 'Other',
+          title: 'Notification',
           headerTintColor: '#fff',
           headerStyle: {
             backgroundColor: '#42C2FF',
