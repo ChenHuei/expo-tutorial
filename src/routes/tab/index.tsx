@@ -1,18 +1,19 @@
+import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import { HomeStackScreen } from './home';
-import { AboutStackScreen } from './about';
+import HomeStackScreen from './home';
+import AccountStackScreen from './account';
 
 const getTabIconName = (routeName: string, focused: boolean) => {
   let iconName;
 
   switch (routeName) {
-    case 'Index':
+    case 'HomeTab':
       iconName = focused ? 'home' : 'home-outline';
       break;
-    case 'Info':
-      iconName = focused ? 'information' : 'information-outline';
+    case 'AccountTab':
+      iconName = focused ? 'account' : 'account-outline';
       break;
     default:
   }
@@ -26,6 +27,9 @@ const TabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
+        headerShown: false,
+        tabBarActiveTintColor: '#42C2FF',
+        tabBarInactiveTintColor: 'gray',
         tabBarIcon: ({ focused, color, size }) => (
           <MaterialCommunityIcons
             name={getTabIconName(route.name, focused)}
@@ -33,13 +37,14 @@ const TabNavigator = () => {
             color={color}
           />
         ),
-        tabBarActiveTintColor: 'tomato',
-        tabBarInactiveTintColor: 'gray',
-        headerShown: false,
       })}
     >
-      <Tab.Screen name="Index" component={HomeStackScreen} />
-      <Tab.Screen name="Info" component={AboutStackScreen} />
+      <Tab.Screen name="HomeTab" component={HomeStackScreen} options={{ tabBarLabel: 'Home' }} />
+      <Tab.Screen
+        name="AccountTab"
+        component={AccountStackScreen}
+        options={{ tabBarLabel: 'Account' }}
+      />
     </Tab.Navigator>
   );
 };

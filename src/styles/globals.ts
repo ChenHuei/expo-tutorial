@@ -6,6 +6,10 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: '#fff',
     padding: 20,
   },
+  center: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   title: {
     color: '#333',
     fontFamily: 'nunito-bold',

@@ -69,7 +69,7 @@ const Home = (props: HomeProps) => {
       <FlatList
         data={reviews}
         renderItem={({ item }) => (
-          <TouchableOpacity onPress={() => navigation.navigate('ReviewDetail', item)}>
+          <TouchableOpacity onPress={() => navigation.navigate('ReviewDetailStack', item)}>
             <Card>
               <Text style={globalStyles.title}>{item.title}</Text>
               <Text>{item.message}</Text>

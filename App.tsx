@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SafeAreaView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import * as Font from 'expo-font';
@@ -10,12 +11,12 @@ export default function App() {
   const [fontLoaded, setFontLoaded] = useState(false);
 
   return fontLoaded ? (
-    <>
+    <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar style="auto" />
       <NavigationContainer>
         <DrawerNavigator />
       </NavigationContainer>
-      <StatusBar style="auto" />
-    </>
+    </SafeAreaView>
   ) : (
     <AppLoading
       startAsync={() =>
